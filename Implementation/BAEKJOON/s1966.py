@@ -1,4 +1,5 @@
 from collections import deque
+## 다시 풀어보기
 # 프린터 큐
 ## 테스트케이스, 문서 갯수, 큐 위치, 중요도 입력
 
