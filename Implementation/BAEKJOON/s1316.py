@@ -8,7 +8,6 @@ for j in range(n):
         
         if data[i] != data[i+1]:
             if data[i] in data[i+1:]:
-
                 n -= 1
-                print('n:::',n)
+                break # break -> 그룹 단어 아니면 -1만 , break 없으면 계속 차감
 print(n)
