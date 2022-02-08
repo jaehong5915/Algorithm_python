@@ -27,6 +27,6 @@ cnt = 0
 for i in range(n):
     for j in range(m):
         if dfs(i,j) == True:
-            print("아이스크림")
+            print("생성")
             cnt += 1
 print(cnt)
