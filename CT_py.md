@@ -29,4 +29,11 @@ for i, name in enumerate(l, 1):
 ## LIST 내포 -> [식 for 변수 이름 in 개체]
 s = [ i**2 for i in range(5)]
 print(s) -> [0, 1, 4, 9, 16]
+
+## if ~ is , if ~ is not
+
+for i in range(len(alpha)):
+	# 타입이 str 이면 ~ if type(a) is str:
+    if type(alpha[i]) is str:
+        alpha[i] = -1
 ```
