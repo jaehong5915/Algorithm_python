@@ -1,3 +1,10 @@
+# 코딩테스트
+- **풀기전, 구체적 계획 세우기**
+    1. 아이디어: 문제를 어떻게 풀것인지
+    2. 시간복잡도: 얼마나 오래걸리는지 확인
+    3. 변수: 변수 어떻게 사용할지 미리 계획
+
+
 # Python
 
 # **숫자형**
@@ -447,6 +454,19 @@ for (first, last) in a :
 		print(first + last)
 --> 3 ... 7 ... 11
 
+
+# 직관적인 for문
+[ 표현식 for 항목 in 리스트 or 튜플 if 조건문]
+
+list = [1,2,3,4,5,6,7,8,9,10]
+list = [ num * 3 for num in list]
+print(list) -> 3,6,9,....,30
+
+k = [list(map(int,input().split())) for _ in range(n)]
+===
+k = []
+for i in range(n):
+    k.append(list(map(int,input().split()))
 ```
 
 - range 함수 : range(시작, 끝) → 시작 이상 끝 미만
