@@ -4,7 +4,9 @@
     2. 시간복잡도: 얼마나 오래걸리는지 확인
     3. 변수: 변수 어떻게 사용할지 미리 계획
 
-
+- **재귀 최대 깊이 설정**
+    - sys.setrecursionlimit(10**6)
+      input = sys.stdin.readline
 # Python
 
 # **숫자형**
