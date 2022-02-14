@@ -15,7 +15,7 @@ for _ in range(m):
     a,b = map(int,input().split())
     graph[a][b] = 1
     graph[b][a] = 1
-v =1
+
 cnt = 0
 def dsf(v):
     global cnt
@@ -27,4 +27,4 @@ def dsf(v):
             dsf(i)
             
     return cnt-1
-print(dsf(v))
+print(dsf(1))
