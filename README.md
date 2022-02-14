@@ -7,6 +7,19 @@
 - **재귀 최대 깊이 설정**
     - sys.setrecursionlimit(10**6)
       input = sys.stdin.readline
+
+- **key = lambda**
+     ```
+    data = [['고구마',250],['바나나',120],['감자',300]]
+    data.sort(key = lambda x:x[1])
+    print(data) -> 가격순 오름차순 정렬
+
+    money = { "백원" : 100, "1$" : 1200, "10$" : 12000, "오천원" : 5000, "만원" : 10000, "100$" : 120000, "오만원" : 50000 }
+
+    money = sorted(money.items(), key = lambda x:x[1])
+    print(money) -> 가격 순 정렬
+    ```
+---
 # Python
 
 # **숫자형**
