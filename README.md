@@ -4,6 +4,17 @@
     2. 시간복잡도: 얼마나 오래걸리는지 확인
     3. 변수: 변수 어떻게 사용할지 미리 계획
 
+- **리스트 중복 제거 방법**
+    ```
+    # set 활용
+    data=[1,1,2,2,3,4]
+    remove_data = list(set(data))
+    
+    # 호출 - 딕셔너리
+    dic = {data[i] : i for i in range(len(r_d))}
+    for i in data:
+        print(d[i], end=' ')
+    ```
 - **재귀 최대 깊이 설정**
     - sys.setrecursionlimit(10**6)
       input = sys.stdin.readline
