@@ -4,9 +4,9 @@ input = sys.stdin.readline
 n=int(input())
 map=[]
 for i in range(n):
-    map.append(map(int,input()))
+    map.append(list(map(int,input())))
 # map = [list(map(int,input())) for _ in range(n)]
-
+# print(map)
 def dsf(x,y):
 
     if x<0 or x>=n or y<0 or y>=n:
