@@ -18,7 +18,9 @@
 - **재귀 최대 깊이 설정**
     - sys.setrecursionlimit(10**6)
       input = sys.stdin.readline
-
+- **리스트 - data[[a,b]] 형태 정렬법**
+    - data = sorted(data, key=lambda x: x[0]) #첫번째 원소 기준
+     
 - **key = lambda**
      ```
     data = [['고구마',250],['바나나',120],['감자',300]]
