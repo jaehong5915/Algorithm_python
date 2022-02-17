@@ -4,6 +4,34 @@
     2. 시간복잡도: 얼마나 오래걸리는지 확인
     3. 변수: 변수 어떻게 사용할지 미리 계획
 
+- **enumerate()**
+    ```
+    # 인덱스와 원소를 동시에 접근하며 for(루프) 돌리기
+    for entry in enumerate(['a','b','c']):
+        print(entry)
+    ===> (0,'a') , (1,'b'), (2,'c') ==> 튜플
+    # 인덱스와 원소 각각 다른 변수에 할당 
+    for i,letter in enumerate(['a','b','c']):
+        print(i,letter)
+    ===> 0 a 1 b 2 c 
+    # 시작인덱스를 0이 아닌 1로
+    for i, letter in enumerate(['a','b','c'], start=1):
+        print(i, letter)
+    ===> 1 a 2 b 3 c
+    ```
+- **itemgetter()**
+    ```
+    # 딕셔너리 정렬
+    import operator
+    trainDic, trainList = {}, []
+
+    trainDic = {'apple':'사과', 'dragon':'용','banana':'바나나'}
+    trainList = sorted(trainDic.items(), key = operator.itemgetter(0))
+     #trainDic 딕셔너리의 0번 원소를 기준으로 오름차순정렬 => 내림차순 : itemgetter(0), reverse=True)
+
+    print(trainList) 
+    => [('apple','사과'),('banana', '바나나'),('dragon','용')]
+    ```
 - **리스트 중복 제거 방법**
     ```
     # set 활용
