@@ -46,6 +46,7 @@
 - **재귀 최대 깊이 설정**
     - sys.setrecursionlimit(10**6)
       input = sys.stdin.readline
+    - 재귀 함수 return -> 바닥조건 성립시 함수 호출했던 부분으로 되돌아감
 - **리스트 - data[[a,b]] 형태 정렬법**
     - data = sorted(data, key=lambda x: x[0]) #첫번째 원소 기준
      
