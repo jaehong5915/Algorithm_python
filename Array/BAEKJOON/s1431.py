@@ -7,16 +7,52 @@
 - 기타 개수 N <= 50
     - 시리얼번호
 '''
+
 n = int(input())
 seri = []
 for _ in range(n):
     seri.append(input())
 
-seri = sorted(seri, key=lambda x:len(x))
-sum =0 
+for i in range(n-1):
+    for j in range(i+1,n):
+        if len(seri[i]) > len(seri[j]):
+            seri[i], seri[j] = seri[j], seri[i]
+
+        elif len(seri[i]) == len(seri[j]):
+            suma = 0
+            sumb = 0
+            for x,y in zip(seri[i], seri[j]):
+                if x.isdigit() == True:
+                    suma += int(x)
+                if y.isdigit() == True:
+                    sumb += int(y)
+            if suma > sumb :
+                seri[i], seri[j] = seri[j], seri[i]
+
+            elif suma == sumb:
+                for x,y in zip(seri[i], seri[j]):
+                    if x> y :
+                        seri[i], seri[j] = seri[j],seri[i]
+                        break
+                    else:
+                        break
+
 for i in seri:
-    for j in range(len(i)):
-        if type(i[j]) == 'int':
-            sum += i[j]
-            i[j] = sum
     print(i)
+
+
+# def sum_num(v):
+#     tot = 0
+#     for i in v:
+#         if i.isdigit() == True:
+#             tot += int(i)
+#     return tot
+
+
+# n = int(input())
+# seri = []
+# for _ in range(n):
+#     seri.append(input())
+# seri = sorted(seri, key=lambda x:(len(x), sum_num(x),x))
+# for i in seri:
+#     print(i)
