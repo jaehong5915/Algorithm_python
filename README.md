@@ -3,11 +3,29 @@
     1. 아이디어: 문제를 어떻게 풀것인지
     2. 시간복잡도: 얼마나 오래걸리는지 확인
     3. 변수: 변수 어떻게 사용할지 미리 계획
+        - *등수와 점수 잘 구분하기* 
+- **리스트 중복 탐색시 집합 활용**
+    ```
+    # 원소 추가 (.add()), 제거 (.remove())
+    # a = set([1,2,3,4,4,4])  print(a) -> {1,2,3,4}
+    # 공집합 (a & b)
+    # 합집합 (a | b)
+    # 차집합 (a - b)
+
+    ```
+
+- **sort vs sorted**
+    - a.sort() -> 리스트 원본값 수정 [메소드]
+    - sorted(a, reverse=True) -> 리스트 원본 그대로 , 정렬값 반환 [내장함수]
+- **정렬**
+    - data = sorted(data, key = lambda x: x[0])
+    - sorted(배열, key = lambda x: x[기준 idx])
 - **Counter**
     - from collections import Counter , 원소 갯수
     - n = [1,1,2,3,3,4]
     - c = Counter(n)
         - print(c) = {1:2, 2:1, 3:2, 4:1}
+    - Counter(a).most_common(n): a의 요소를 세어, 최빈값 n 반환
 - **abs**
     - abs(x) -> 절대값 함수
     ```
