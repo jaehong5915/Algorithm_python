@@ -27,6 +27,27 @@
 
 ---
 # 실전활용
+-**bisect**
+    ```
+    bisect.bisect(a,x) : a에 있는 x의 기존 항목 뒤에 오는 삽입 위치 반환
+    ex) a = [8, 1, 7, 3, 1] b = [1, 3, 6]
+    print(bisect.bisect(b,a[i])) -> a[i]가 b에 들어갈 우측 인덱스 반환
+    bisect_left(literable, value): 왼쪽 인덱스 구하기 (초과범위)
+    bisect_right(literable,value): 오른쪽 인덱스 구하기 (미만범위)
+    ex)
+    import bisect
+    result = []
+    for score in [33,99,77,70,89,90,100]:
+        pos = ***bisect.bisect***([60,70,80,90], score)
+        grade = 'FDCBA'[pos]
+        result.append(grade)
+    print(result) => ['F','A','C','C','B','A','A']
+
+    #bisect.insort - 정렬된 위치에 해당 항목 삽입
+    a = [60,70,80,90]
+    bisect.insort(a,85)
+    a -> [60,70,80,85,90]
+    ```
 - **리스트 크기 비교**
     ```
     for x,y in zip(arr[i], arr[j]):
