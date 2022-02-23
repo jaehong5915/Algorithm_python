@@ -1,4 +1,19 @@
 # 이진 탐색
+```
+# 대표적 유형
+~~ 길이를 구하여라
+start = 가장 짧은길이 Ex)1 , end = max(data)
+while start <= end:
+	mid = ( start + end )//2
+	cnt = 0
+	for i in data:
+		cnt += i or cnt += i // mid (분할)
+		if cnt >= N (분기점 EX)기준점)
+			start = mid + 1
+		else:
+			end = mid - 1
+print(end)
+```
 - 두 리스트 크기 비교시
 	- 중간값, 타겟 활용
 	- data[mid] < target[m] -> target[m] 값 미만은 모두 data[mid] 보다 작음
