@@ -2,12 +2,15 @@
 용돈 관리
 
 '''
+import sys
+input = sys.stdin.readline
+
 n, m = map(int,input().split())
 data =[]
 for _ in range(n):
     data.append(int(input()))
 start = 1
-end = 10**4
+end = sum(data)
 # end = sum(data)
 # cnt = 0
 mon = 0
