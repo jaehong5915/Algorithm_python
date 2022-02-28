@@ -27,6 +27,13 @@
 
 ---
 # 실전활용
+-**순열과 조합 - combinations,permutations**
+    ```
+    # 1,2,3 의 숫자가 적힌 카드 중 두 장 -> (1,2) (1,3) ...(3,1) (3,2)
+    import itertools
+    pool = ['a','b','c']
+    data = list(map(''.join, itertools.permutations(pool, 2)))
+    ```
 -**정수 자릿수 활용**
     - str 타입으로 입력 받고 자릿수 => len(n)
     - while문 활용시 i 선언 후 인덱스로 활용하기
