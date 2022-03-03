@@ -27,6 +27,14 @@
 
 ---
 # 실전활용
+-**factorial**
+    ```
+    다리의 개수 N개 M개의 지역에 N개의 다리를 놓을 경우의 수
+    mCn -> factorial[M] // (factorial[N] * factorial[M-N])
+    for i in range(1,30):
+            factorial.append(factorial[i-1] * i)
+    bridge = factorial[M] // (factorial[N] * factorial[M-N])
+    ```
 -**index**
     ```
     a = [1,2,3]
