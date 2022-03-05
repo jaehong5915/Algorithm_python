@@ -6,15 +6,9 @@
 n = int(input())
 data = list(map(int,input().split()))
 # dp = [x for x in data]
-dp = [0] * n
+dp = [1] * n
 for i in range(n):
-    for j in range(i+1,n):
-        if data[i] > data[j]:
-            dp[i] += 1
-            dp[i] = data[j]
-# for i in range(n-1,-1,-1):
-#     for j in range(i-1,-1,-1):
-#         if data[i] < data[j]:
-#             dp[i] += 1
-print(dp)
-# print(max(dp))
+    for j in range(i):
+        if data[i] < data[j]:
+            dp[i] = max(dp[i], dp[j]+1)
+print(max(dp))
