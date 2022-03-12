@@ -17,21 +17,20 @@ for _ in range(m):
     data[a].append(b)
     data[b].append(a)
 def bfs(v):
-    visit = [False] * (n+1)
-    visit[v] = True
-    cnt = 0
-    k = []
+    num = [0] * (n+1)
+    visit = [v]
     q = deque()
     q.append(v)
     while q:
         r = q.popleft()
-        k.append(r)
         for i in data[r]:
-            if i not in k :
+            if i not in visit :
+                visit.append(i)
                 q.append(i)
-                cnt += 1
-    return cnt
+                num[i] = num[r] + 1 # a에서 i로 1칸             
+    return sum(num)
 rs = []
+rs1 = []
 for i in range(1,n+1):
     rs.append(bfs(i))
-print(rs)
+print(rs.index(min(rs))+1)
