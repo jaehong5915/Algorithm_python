@@ -10,6 +10,21 @@
 - 한번 처리된 노드의 최단거리는 불변
     1. 출발 노드를 설정한다.
     2. 최단 거리 테이블 초기화한다. [모든 거리 무한 설정, 자기 자신에 대한 노드 (1 → 1) ‘0’ 으로
+		
+		```python
+
+		heapq.heappush(q, (거리(비용), 노드))
+		dis,now = heapq.heappop(q)
+		if distan[now] < 도착지 : continue
+		for x in data[now]: #x[0] - end , x[1] - length
+			cost = d + x[1]
+			if distan[x[0]] > cost: # 최소거리이면, 
+				distan[x[0]] = cost
+			heapq.heappush(q, (cost,x[0]))  #힙에 추가 bfs와 유사
+		print(distance[D]) # D 까지 최소 거리(비용)
+
+ 		```
+		 
     3. 방문하지 않은 노드 중에서 **최단 거리가 가장 짧은 노드를 선택한다  : 그리디**
     4. 해당 노드를 거쳐 다른 노드로 가는 비용을 계산하여 최단거리 테이블 갱신 (data[i] = data[a] + 거리)
     5.  3 과 4번 반복
