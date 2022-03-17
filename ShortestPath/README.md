@@ -12,7 +12,7 @@
     2. 최단 거리 테이블 초기화한다. [모든 거리 무한 설정, 자기 자신에 대한 노드 (1 → 1) ‘0’ 으로
 		
 		```python
-
+		#순서 기억하기 --- 비용 / 노드 
 		heapq.heappush(q, (거리(비용), 노드))
 		dis,now = heapq.heappop(q)
 		if distan[now] < 도착지 : continue
