@@ -39,4 +39,4 @@ while q:
             distance[i[0]] = min_cost
             heapq.heappush(q,(min_cost,i[0]))
 
-print(distance[E])
+print(distance[E]) 
