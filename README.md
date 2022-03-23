@@ -27,16 +27,19 @@
 
 ---
 # 실전활용
--**factorial**
-    ```
+- **factorial**
+
+    ```python
     다리의 개수 N개 M개의 지역에 N개의 다리를 놓을 경우의 수
     mCn -> factorial[M] // (factorial[N] * factorial[M-N])
     for i in range(1,30):
             factorial.append(factorial[i-1] * i)
     bridge = factorial[M] // (factorial[N] * factorial[M-N])
     ```
--**index**
-    ```
+
+- **index**
+
+    ```python
     a = [1,2,3]
     a.index(2) => 1
     b = ['hi','hello','bye']
@@ -45,19 +48,24 @@
     a.index(10,2,9) # index(value, start, end) 2번째 ~ 9번째 위치에서 10의 인덱스 찾기
     a = '12345'
     a.index(a) 문자열에서 a의 위치 찾기
+    ```
+
+- **순열과 조합 - combinations,permutations**
     
-    ```
--**순열과 조합 - combinations,permutations**
-    ```
+    ```python
     # 1,2,3 의 숫자가 적힌 카드 중 두 장 -> (1,2) (1,3) ...(3,1) (3,2)
     import itertools
     pool = ['a','b','c']
     data = list(map(''.join, itertools.permutations(pool, 2)))
     ```
--**정수 자릿수 활용**
+
+- **정수 자릿수 활용**
+
     - str 타입으로 입력 받고 자릿수 => len(n)
     - while문 활용시 i 선언 후 인덱스로 활용하기
--**그래프 거리구하는 문제**
+
+- **그래프 거리구하는 문제**
+
     - 거리를 나타내는 새로운 배열 생성해서 풀이하기
     ```
     ans = [-1] * (n+1) #n => 도시 수
@@ -65,7 +73,9 @@
         if ans[i] == -1 :
             ans[i] = ans[r] + 1 #이동한 거리 
     ```
--**bisect**
+
+- **bisect**
+
     ```
     bisect.bisect(a,x) : a에 있는 x의 기존 항목 뒤에 오는 삽입 위치 반환
     ex) a = [8, 1, 7, 3, 1] b = [1, 3, 6]
@@ -86,6 +96,7 @@
     bisect.insort(a,85)
     a -> [60,70,80,85,90]
     ```
+
 - **리스트 크기 비교**
     ```
     for x,y in zip(arr[i], arr[j]):
