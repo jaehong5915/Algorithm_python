@@ -9,6 +9,45 @@
 - N, M (세로, 가로)
 
 '''
-n,m,b = map(int,input().split())
+from collections import deque
 
-# n - x, m - y
+n,m,b = map(int,input().split())
+dx = [1,0,-1,0]
+dy = [0,1,0,-1]
+
+data = []
+for _ in range(n):
+    data.append(list(map(int,input().split())))
+visit = [[False]*n for _ in range(m)]
+def bfs(i,j):
+    cnt = 0
+    visit[i][j] = True
+    q = deque()
+    q.append((i,j))
+    while q:
+        x,y = q.popleft()
+        for i in range(4):
+            nx = dx[i] + x
+            ny = dy[i] + y
+            if 0<= nx < n and 0<=ny<m and visit[nx][ny] == False:
+                if data[nx][ny] == data[x][y]:
+                    visit[nx][ny] = True
+                    q.append((nx,ny))
+                elif data[x][y] > data[nx][ny]:
+                    data[x][y] -= 1
+                    cnt +=2
+                    b += 1
+                    visit[nx][ny] = True
+                    q.append((nx,ny))
+                elif data[x][y] < data[nx][ny]:
+                    data[x][y] += 1
+                    cnt +=1
+                    b -= 1
+                    visit[nx][ny] = True
+                    q.append((nx,ny))
+    return cnt
+rs = []
+for i in range(n):
+    for j in range(m):
+        rs.append(bfs(i,j))
+print(rs)
