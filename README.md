@@ -36,6 +36,14 @@
             factorial.append(factorial[i-1] * i)
     bridge = factorial[M] // (factorial[N] * factorial[M-N])
     ```
+- **isalpha(), isalnum()**
+    
+    ```python
+    # isalpha - 영어 혹은 한글 - 참
+    text1 = '1234as' -> text1.isalpha() - True
+    # isalnum - 영어, 한글, 숫자
+    text1 = '123as' -> text1.isalnum() - True
+    ```
 
 - **index**
 
