@@ -30,6 +30,12 @@
 - **factorial**
 
     ```python
+    # 간단한 조합 공식
+    import math
+    up = math.factorial(n)
+    down = (math.factorial(n-m)) * (math.factorial(m))
+    print(up/down)
+    
     다리의 개수 N개 M개의 지역에 N개의 다리를 놓을 경우의 수
     mCn -> factorial[M] // (factorial[N] * factorial[M-N])
     for i in range(1,30):
