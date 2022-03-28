@@ -27,6 +27,14 @@
 
 ---
 # 실전활용
+- **gcd, lcm**
+    ```python
+    # 최대공약수 - 사각형 자르는 문제
+    import math
+    math.gcd(a,b) # a와b의 최대 공약수
+    math.lcm(a,b)
+    ```
+
 - **factorial**
 
     ```python
