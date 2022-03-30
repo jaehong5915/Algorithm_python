@@ -10,9 +10,9 @@ input = sys.stdin.readline
 
 n, m, v = map(int, input().split())
 graph = [[0]*(n+1) for _ in range(n+1)]
-visited = [False]*(n+1)
-visited1 = [False]*(n+1)
-
+# visited = [False]*(n+1) #visited 하나로 가능한지?
+# visited1 = [False]*(n+1)
+#양방향 그래프
 for _ in range(m):
     a,b = map(int,input().split())
     graph[a][b] = 1
@@ -26,16 +26,18 @@ def dfs(v):
             dfs(i)
 
 def bfs(v):
-    visited1[v] = True
+    visited[v] = True
     q = deque()
     q.append(v)
     while q:
         v = q.popleft()
         print(v, end=' ')
         for i in range(1, n+1):
-            if visited1[i] == False and graph[v][i] == 1:
+            if visited[i] == False and graph[v][i] == 1:
                 q.append(i)
-                visited1[i] = True
+                visited[i] = True
+visited = [False]*(n+1)                
 dfs(v)
+visited = [False]*(n+1)
 print()
 bfs(v)
