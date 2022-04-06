@@ -1,5 +1,9 @@
 # 자료구조
 - heapq
+    -모든 부모 노드는 자식 노드보다 값이 작거나 큰 이진트리 구조
+- heapq.heappush(heap,item): item을 heap에 추가
+- heapq.heappop(heap) : heap에서 가장 작은 원소를 pop & 리턴
+- heapq.heapify(x) : 리스트 x를 즉각적으로 heap으로 변환
 
 ```python
     # 자바의 PriorityQueue 클래스 
