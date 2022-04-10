@@ -1,6 +1,6 @@
 '''
 패션왕 신해빈
-
+4/10 다시 풀기
 '''
 from collections import Counter
 cnt = 0
@@ -9,10 +9,10 @@ for _ in range(n):
     t = int(input())
     data = []
     for _ in range(t):
-        kind, name = map(str,input().split())
-        data.append(name)
+        a,  b = map(str,input().split())
+        data.append(b)
     rs = Counter(data)    
-    num = 1
+    pr_rs = 1
     for i in rs:
-        num *= rs[i] +1
-    print(num-1)
+        pr_rs *= rs[i] +1
+    print(pr_rs-1)
