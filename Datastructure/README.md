@@ -28,9 +28,11 @@
         h = []
         result = []
         # 모든 원소를 차례대로 힙에 삽입
+        # 최대 힙 필요하면 '-' 붙이기 
         for value in data:
             heapq.heappush(h,value)
         # 힙에 삽입된 모든 원소를 차례대로 꺼내어 담기
+        
         for i in range(len(data)):
             result.append(heapq.heappop(data))
         return result
