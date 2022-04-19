@@ -5,6 +5,9 @@
 2. bfs, dfs -> 
 '''
 from collections import deque
+import sys
+input = sys.stdin.readline
+
 n,m,v = map(int,input().split())
 graph = [[0]* (n+1) for _ in range(n+1)]
 
@@ -12,18 +15,14 @@ for _ in range(m):
     a, b = map(int,input().split())
     graph[a][b] = 1
     graph[b][a] = 1
-# def dfs(v):
-#     visited[v] = True
-#     print(v, end=' ')
-#     for i in range(1,n+1):
-#         if visited[i] == False and graph[v][i] == 1:
-#             dfs(i)
+    
 def dfs(v):
-    visit[v] == True
+    visit[v] = True
     print(v,end=' ')
     for i in range(1,n+1):
         if graph[v][i] == 1 and visit[i] == False:
             dfs(i)
+
 def bfs(v):
     visit[v] = True
     q = deque()
@@ -35,10 +34,11 @@ def bfs(v):
             if visit[i] == False and graph[k][i] == 1:
                 visit[i] = True
                 q.append(i)
+
 visit=[False] * (n+1)
 dfs(v)
-print()
 visit=[False] * (n+1)
+print()
 bfs(v)
 
 
