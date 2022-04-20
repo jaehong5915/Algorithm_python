@@ -27,6 +27,20 @@
 
 ---
 # 실전활용
+- **[], (), {}**
+    ```python
+    #[] - array
+    #() - tuple
+    mytuple = ()
+    mytuple = (1,2,3,4)
+    mytuple[3] # 튜플 원소 접근은 [] 사용
+
+    # {} - Dictionary 
+    myDic = {}
+    myDic = {"mouse":3, "lion":2}
+    myDic["mouse"]
+    myDic.value()
+    ```
 - **gcd, lcm**
     ```python
     # 최대공약수 - 사각형 자르는 문제
