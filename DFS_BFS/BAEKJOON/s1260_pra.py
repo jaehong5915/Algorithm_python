@@ -5,41 +5,39 @@
 2. bfs, dfs -> 
 '''
 from collections import deque
-import sys
-input = sys.stdin.readline
 
 n,m,v = map(int,input().split())
-graph = [[0]* (n+1) for _ in range(n+1)]
-
+graph = [[0] * (n+1) for _ in range(n+1)]
+dfs_visit = [False] * (n+1)
+bfs_visit = [False] * (n+1)
 for _ in range(m):
     a, b = map(int,input().split())
-    graph[a][b] = 1
-    graph[b][a] = 1
-    
+    graph[a][b] == 1
+    graph[b][a] == 1
+# v 시작 노드
 def dfs(v):
-    visit[v] = True
-    print(v,end=' ')
+    dfs_visit[v] = True
+    print(v, end= ' ')
     for i in range(1,n+1):
-        if graph[v][i] == 1 and visit[i] == False:
+        if dfs_visit[i] == False and graph[v][i] == 1:
             dfs(i)
 
 def bfs(v):
-    visit[v] = True
+    bfs_visit[v] = True
     q = deque()
     q.append(v)
     while q:
-        k = q.popleft()
-        print(k, end=' ')
-        for i in range(1, n+1):
-            if visit[i] == False and graph[k][i] == 1:
-                visit[i] = True
+        x = q.popleft()
+        print(x, end=' ')
+        for i in range(1,n+1):
+            if bfs_visit[i] == False and graph[x][i] == 1:
+                bfs_visit[i] = True
                 q.append(i)
 
-visit=[False] * (n+1)
 dfs(v)
-visit=[False] * (n+1)
 print()
 bfs(v)
+
 
 
 
